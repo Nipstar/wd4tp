@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run server",
+    "dev": "vite",
     "build": "tsx scripts/generate-seo.ts && vite build",
     "server": "tsx server/index.ts",
     "preview": "NODE_ENV=production npm run server"
@@ -25,6 +25,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.71.2",
+    "sharp": "^0.34.5",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.0",
     "vike": "^0.4.253",

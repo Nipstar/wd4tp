@@ -5,9 +5,16 @@ import { QuoteForm } from '@/components/forms/QuoteForm'
 export function Page() {
     return (
         <>
-            <section className="bg-brand-dark pt-20 pb-32 text-center text-white relative">
-                <div className="container mx-auto px-4 relative z-10 max-w-4xl">
-                    <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6">
+            <section className="bg-brand-dark pt-32 pb-32 lg:pt-48 lg:pb-48 text-center text-white relative overflow-hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{ backgroundImage: "url('/images/hero-contact-bg.webp')" }}
+                />
+                {/* Dark overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
+
+                <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6 leading-[1.2]">
                         Let's have a chat.<br />
                         <span className="text-brand-amber">No sales pitch, promise.</span>
                     </h1>

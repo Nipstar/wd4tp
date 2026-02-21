@@ -17,16 +17,25 @@ export function Page() {
     return (
         <>
             <div className="bg-brand-dark overflow-hidden">
-                <section className="relative pt-24 pb-32 text-white border-b-8 border-brand-ai relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.15),transparent_50%)]" />
-                    <div className="container mx-auto px-4 relative z-10 max-w-5xl text-center">
+                <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-40 text-white border-b-8 border-brand-ai overflow-hidden">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center z-0"
+                        style={{ backgroundImage: "url('/images/hero-ai-receptionist-bg.webp')" }}
+                    />
+                    {/* Dark overlay to ensure text readability */}
+                    <div className="absolute inset-0 bg-brand-dark/80 z-0" />
+                    <div className="absolute inset-0 z-0">
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.3),transparent_60%)] pointer-events-none" />
+                    </div>
+
+                    <div className="container mx-auto px-4 relative z-10 max-w-5xl flex flex-col items-center">
 
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-ai/20 text-brand-ai font-medium text-sm mb-8 border border-brand-ai/30">
                             <Bot className="h-4 w-4" />
                             Certified Retell AI Partner
                         </div>
 
-                        <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-[1.1]">
+                        <h1 className="text-4xl lg:text-6xl text-white font-display font-bold mb-6 leading-[1.1]">
                             Never miss a call again.<br />
                             <span className="text-brand-ai">Your AI receptionist handles it.</span>
                         </h1>

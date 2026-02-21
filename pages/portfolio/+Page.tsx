@@ -4,12 +4,20 @@ import { TrendingUp, ArrowRight } from 'lucide-react'
 export function Page() {
     return (
         <>
-            <section className="bg-brand-dark pt-20 pb-24 text-center text-white relative">
-                <div className="container mx-auto px-4 relative z-10 max-w-4xl">
-                    <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6">
-                        Websites That Actually <span className="text-brand-amber">Work</span>
+            <section className="bg-brand-dark pt-32 pb-32 lg:pt-40 lg:pb-40 text-center text-white relative overflow-hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{ backgroundImage: "url('/images/hero-portfolio-bg.webp')" }}
+                />
+                {/* Dark overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
+
+                <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6">
+                        Websites That Actually <br className="hidden md:block" />
+                        <span className="text-brand-amber">Work</span>
                     </h1>
-                    <p className="text-xl text-brand-cream/80 max-w-2xl mx-auto mb-10">
+                    <p className="text-xl md:text-2xl text-brand-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed">
                         We build sites that don't just look pretty—they capture leads, answer calls, and get you found.
                     </p>
                 </div>
