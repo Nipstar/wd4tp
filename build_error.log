@@ -1,0 +1,98 @@
+7:50:28 PM [vike][Warning] Define Vike settings in +config.js instead of vite.config.js https://vike.dev/migration/settings
+vite v7.3.1 building client environment for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/.vite/manifest.json                                   6.95 kB │ gzip:  0.86 kB
+dist/client/assets/static/renderer_index-b6f489bf.YF3bZFJ6.css   59.18 kB │ gzip: 10.00 kB
+dist/client/assets/chunks/chunk-D3ABXnjt.js                       0.34 kB │ gzip:  0.27 kB
+dist/client/assets/chunks/chunk-DYZzkY3Q.js                       0.35 kB │ gzip:  0.27 kB
+dist/client/assets/chunks/chunk-By3K9j4Q.js                       0.35 kB │ gzip:  0.27 kB
+dist/client/assets/entries/pages_about.DhAMzDty.js                4.87 kB │ gzip:  1.87 kB
+dist/client/assets/entries/pages_roofers.1MkvFV_P.js              5.03 kB │ gzip:  1.72 kB
+dist/client/assets/entries/pages_contact.4OOYF39k.js              5.11 kB │ gzip:  1.53 kB
+dist/client/assets/entries/pages_plumbers.ROWhTj2h.js             5.77 kB │ gzip:  1.90 kB
+dist/client/assets/entries/pages_landscapers.VH4VPIol.js          5.95 kB │ gzip:  2.08 kB
+dist/client/assets/entries/pages_builders.BBRDiqaD.js             5.97 kB │ gzip:  2.10 kB
+dist/client/assets/entries/pages_seo.Cqbnirmn.js                  6.33 kB │ gzip:  2.41 kB
+dist/client/assets/entries/pages_electricians.BF-8R-sc.js         6.42 kB │ gzip:  2.15 kB
+dist/client/assets/entries/pages_portfolio.DaqZC_Zk.js            7.50 kB │ gzip:  1.98 kB
+dist/client/assets/chunks/chunk-C5xxSe2q.js                       9.33 kB │ gzip:  3.55 kB
+dist/client/assets/entries/pages_ai-receptionist.Csog29-u.js      9.81 kB │ gzip:  2.96 kB
+dist/client/assets/entries/pages_pricing.tyeJOT4g.js             15.19 kB │ gzip:  3.45 kB
+dist/client/assets/entries/pages_index.DX_gOkZ3.js               24.00 kB │ gzip:  7.14 kB
+dist/client/assets/entries/entry-client-routing.BiyFJWMt.js      90.67 kB │ gzip: 26.61 kB
+dist/client/assets/chunks/chunk-VtQBIQyV.js                     275.42 kB │ gzip: 86.35 kB
+✓ built in 1.55s
+vite v7.3.1 building ssr environment for production...
+transforming...
+components/ui/accordion.tsx (2:0): Error when using sourcemap for reporting an error: Can't resolve original location of error.
+✓ 47 modules transformed.
+rendering chunks...
+dist/server/package.json                        0.02 kB
+dist/server/.vite/manifest.json                 4.83 kB
+dist/server/chunks/chunk-DF-2aKLS.js            1.83 kB
+dist/server/entries/pages_about.mjs             6.30 kB
+dist/server/entries/pages_roofers.mjs           6.61 kB
+dist/server/entries/pages_contact.mjs           6.79 kB
+dist/server/entries/pages_plumbers.mjs          7.60 kB
+dist/server/entries/pages_seo.mjs               7.74 kB
+dist/server/entries/pages_landscapers.mjs       7.78 kB
+dist/server/entries/pages_builders.mjs          7.79 kB
+dist/server/entries/pages_electricians.mjs      8.32 kB
+dist/server/entries/pages_portfolio.mjs         9.78 kB
+dist/server/entries/pages_ai-receptionist.mjs  12.91 kB
+dist/server/entry.mjs                          12.94 kB
+dist/server/entries/pages_pricing.mjs          21.02 kB
+dist/server/chunks/chunk-CiLNuz1h.js           21.39 kB
+dist/server/entries/pages_index.mjs            25.32 kB
+vike v0.4.253 pre-rendering HTML...
+ReferenceError: CheckCircle2 is not defined
+    at file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/dist/server/entries/pages_about.mjs:35:31
+    at Array.map (<anonymous>)
+    at Page (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/dist/server/entries/pages_about.mjs:34:11)
+    at renderWithHooks (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4196:18)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4334:14)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at renderNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5401:14)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4400:14)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at renderNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5401:14)
+    at renderChildrenArray (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5183:7)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5054:9)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at renderNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5401:14)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4400:14)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at finishFunctionComponent (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4237:9)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4336:7)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4453:9)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at renderNodeDestructive (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4843:7)
+    at finishFunctionComponent (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4237:9)
+    at renderElement (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:4336:7)
+    at retryNode (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5040:16)
+    at performWork (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:5871:13)
+    at renderToStringImpl (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:6654:3)
+    at exports.renderToString (/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/Code Projects/WD4tp/revamp/node_modules/react-dom/cjs/react-dom-server-legacy.node.production.js:6685:10)
+    at Object.onRenderHtml [as hookFn] (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/dist/server/chunks/chunk-CiLNuz1h.js:410:16)
+    at file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:37:63
+    at callOriginal (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:118:16)
+    at execHookBase (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:122:16)
+    at file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:99:31
+    at execHookBaseAsync (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:108:7)
+    at file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:37:34
+    at Array.map (<anonymous>)
+    at execHookList (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:36:53)
+    at execHookSingleWithReturn (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/shared-server-client/hooks/execHook.js:48:35)
+    at execHookOnRenderHtml (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/server/runtime/renderPageServer/execHookOnRenderHtml.js:20:34)
+    at prerenderPageEntry (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/server/runtime/renderPageServer/renderPageServerAfterRoute.js:88:46)
+    at render (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/server/runtime/renderPageServer/renderPageServerAfterRoute.js:70:32)
+    at prerenderPage (file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/server/runtime/renderPageServer/renderPageServerAfterRoute.js:72:16)
+    at file:///Users/andrewnorman/Library/Mobile%20Documents/com%7Eapple%7ECloudDocs/Code%20Projects/WD4tp/revamp/node_modules/vike/dist/node/prerender/runPrerender.js:523:19

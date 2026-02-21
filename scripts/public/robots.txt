@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webdesignfortradespeople.co.uk/sitemap.xml

@@ -1,0 +1,248 @@
+{
+  "_chunk-BUYJBgnc.js": {
+    "file": "assets/chunks/chunk-BUYJBgnc.js",
+    "name": "trending-up",
+    "imports": [
+      "_chunk-CxikOaJa.js"
+    ]
+  },
+  "_chunk-CxikOaJa.js": {
+    "file": "assets/chunks/chunk-CxikOaJa.js",
+    "name": "Loading",
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "_chunk-DRmzZAxA.js": {
+    "file": "assets/chunks/chunk-DRmzZAxA.js",
+    "name": "circle-check",
+    "imports": [
+      "_chunk-CxikOaJa.js"
+    ]
+  },
+  "_chunk-JXiZmhS3.js": {
+    "file": "assets/chunks/chunk-JXiZmhS3.js",
+    "name": "bot",
+    "imports": [
+      "_chunk-CxikOaJa.js"
+    ]
+  },
+  "_chunk-dgx9WJSh.js": {
+    "file": "assets/chunks/chunk-dgx9WJSh.js",
+    "name": "arrow-right",
+    "imports": [
+      "_chunk-CxikOaJa.js"
+    ]
+  },
+  "_chunk-zT00Z6XK.js": {
+    "file": "assets/chunks/chunk-zT00Z6XK.js",
+    "name": "accordion",
+    "imports": [
+      "_chunk-CxikOaJa.js"
+    ]
+  },
+  "_renderer_index-b6f489bf.CoHOnuGm.css": {
+    "file": "assets/static/renderer_index-b6f489bf.CoHOnuGm.css",
+    "src": "_renderer_index-b6f489bf.CoHOnuGm.css"
+  },
+  "node_modules/vike/dist/client/runtime-client-routing/entry.js": {
+    "file": "assets/entries/entry-client-routing.BRhLvqb1.js",
+    "name": "entries/entry-client-routing",
+    "src": "node_modules/vike/dist/client/runtime-client-routing/entry.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "virtual:vike:page-entry:client:/pages/about",
+      "virtual:vike:page-entry:client:/pages/ai-receptionist",
+      "virtual:vike:page-entry:client:/pages/builders",
+      "virtual:vike:page-entry:client:/pages/contact",
+      "virtual:vike:page-entry:client:/pages/electricians",
+      "virtual:vike:page-entry:client:/pages/index",
+      "virtual:vike:page-entry:client:/pages/landscapers",
+      "virtual:vike:page-entry:client:/pages/plumbers",
+      "virtual:vike:page-entry:client:/pages/portfolio",
+      "virtual:vike:page-entry:client:/pages/pricing",
+      "virtual:vike:page-entry:client:/pages/roofers",
+      "virtual:vike:page-entry:client:/pages/seo"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/about": {
+    "file": "assets/entries/pages_about.CjmX_8-t.js",
+    "name": "entries/pages/about",
+    "src": "virtual:vike:page-entry:client:/pages/about",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/ai-receptionist": {
+    "file": "assets/entries/pages_ai-receptionist.DrSBLlOK.js",
+    "name": "entries/pages/ai-receptionist",
+    "src": "virtual:vike:page-entry:client:/pages/ai-receptionist",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-JXiZmhS3.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/builders": {
+    "file": "assets/entries/pages_builders.BrsC4C5y.js",
+    "name": "entries/pages/builders",
+    "src": "virtual:vike:page-entry:client:/pages/builders",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/contact": {
+    "file": "assets/entries/pages_contact.p-j8p5mL.js",
+    "name": "entries/pages/contact",
+    "src": "virtual:vike:page-entry:client:/pages/contact",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/electricians": {
+    "file": "assets/entries/pages_electricians.CIyp744p.js",
+    "name": "entries/pages/electricians",
+    "src": "virtual:vike:page-entry:client:/pages/electricians",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/index": {
+    "file": "assets/entries/pages_index.XkkR_RLW.js",
+    "name": "entries/pages/index",
+    "src": "virtual:vike:page-entry:client:/pages/index",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-dgx9WJSh.js",
+      "_chunk-DRmzZAxA.js",
+      "_chunk-JXiZmhS3.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/landscapers": {
+    "file": "assets/entries/pages_landscapers.BxS3Kbrg.js",
+    "name": "entries/pages/landscapers",
+    "src": "virtual:vike:page-entry:client:/pages/landscapers",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/plumbers": {
+    "file": "assets/entries/pages_plumbers.AuAK5ScY.js",
+    "name": "entries/pages/plumbers",
+    "src": "virtual:vike:page-entry:client:/pages/plumbers",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/portfolio": {
+    "file": "assets/entries/pages_portfolio.R-872bas.js",
+    "name": "entries/pages/portfolio",
+    "src": "virtual:vike:page-entry:client:/pages/portfolio",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-BUYJBgnc.js",
+      "_chunk-dgx9WJSh.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/pricing": {
+    "file": "assets/entries/pages_pricing.g_OGIHks.js",
+    "name": "entries/pages/pricing",
+    "src": "virtual:vike:page-entry:client:/pages/pricing",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/roofers": {
+    "file": "assets/entries/pages_roofers.CbUC7zgt.js",
+    "name": "entries/pages/roofers",
+    "src": "virtual:vike:page-entry:client:/pages/roofers",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-DRmzZAxA.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  },
+  "virtual:vike:page-entry:client:/pages/seo": {
+    "file": "assets/entries/pages_seo.D8Zh1pq1.js",
+    "name": "entries/pages/seo",
+    "src": "virtual:vike:page-entry:client:/pages/seo",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-CxikOaJa.js",
+      "_chunk-zT00Z6XK.js",
+      "_chunk-BUYJBgnc.js"
+    ],
+    "css": [
+      "assets/static/renderer_index-b6f489bf.CoHOnuGm.css"
+    ]
+  }
+}
