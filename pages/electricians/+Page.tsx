@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2 } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const FAQS = [
     {
@@ -13,13 +15,51 @@ const FAQS = [
     }
 ]
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Electrician Website Design",
+    "description": "Professional websites designed for electricians. Rank on Google for emergency callouts and local searches.",
+    "provider": {
+        "@type": "ProfessionalService",
+        "name": BUSINESS_DETAILS.name,
+        "telephone": BUSINESS_DETAILS.phoneLink,
+        "url": "https://webdesignfortradespeople.co.uk"
+    },
+    "areaServed": "United Kingdom",
+    "serviceType": "Web Design for Electricians"
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={serviceSchema} />
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'Electricians', item: 'https://webdesignfortradespeople.co.uk/electricians' }
+            ]} />
+
             <section className="relative bg-brand-dark pt-32 pb-32 lg:pt-48 lg:pb-48 text-center text-white overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-                </div>
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{ backgroundImage: "url('/images/hero-electricians-bg.webp')" }}
+                />
+                {/* Dark overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6 leading-[1.1]">
                         Electrician Website Design That Gets You More <br className="hidden md:block" />
@@ -47,17 +87,17 @@ export function Page() {
                 </div>
             </section>
 
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white border-b border-brand-slate/10">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <h2 className="text-3xl font-display font-bold text-center mb-12">What a good electrician website includes:</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
-                            "Click-to-call button — front and centre, works on mobile",
-                            "Service pages — rewires, consumer units, testing, whatever you do",
-                            "Service area map — so people know you cover their town",
-                            "NICEIC / NAPIT badge display — trust matters in electrics",
-                            "Google-friendly structure — 'electrician [your town]' finds you",
-                            "Photo gallery — your boards, your work, your van. Real, not stock."
+                            "Click-to-call emergency button — one tap",
+                            "Service breakdown — rewires, fuse boards, testing, EV",
+                            "Areas covered with local keywords",
+                            "NICEIC / NAPIT / Part P badges",
+                            "Case studies with before/after work",
+                            "Google review integration"
                         ].map((feat, i) => (
                             <div key={i} className="flex items-start gap-4 p-4 rounded-xl border border-brand-slate/10 bg-brand-cream/50">
                                 <CheckCircle2 className="text-brand-amber h-6 w-6 shrink-0" />
@@ -72,24 +112,11 @@ export function Page() {
                 <div className="container mx-auto px-4 max-w-3xl">
                     <h2 className="text-3xl font-display font-bold mb-6">The Secret Weapon: AI Receptionist</h2>
                     <p className="text-xl text-brand-cream/90 leading-relaxed mb-8">
-                        And here's what most electricians don't have: when someone calls at 9pm with a tripped fuse and you can't answer, our AI receptionist picks up, gets their details, and texts you the summary. You call back in 10 minutes. Job booked. Without the AI, that call goes to voicemail and they've already called your competitor.
+                        You're up a ladder, elbow-deep in a consumer unit. Phone rings. Our AI picks up, gets the details, and sends you a text summary. Emergency? Forwarded to you. Quote? Call back when you're done. No more missed £200 callouts.
                     </p>
                     <Button asChild size="lg" className="bg-white text-brand-ai font-display font-bold hover:bg-white/90">
                         <a href="/ai-receptionist">Learn about AI Add-ons</a>
                     </Button>
-                </div>
-            </section>
-
-            <section className="py-24 bg-brand-cream border-y border-brand-slate/10">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-display font-bold mb-12">How it works</h2>
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-12 text-xl font-medium text-brand-slate">
-                        <div>1. Chat</div>
-                        <div className="text-brand-amber hidden md:block">&rarr;</div>
-                        <div>2. Build</div>
-                        <div className="text-brand-amber hidden md:block">&rarr;</div>
-                        <div>3. Go Live</div>
-                    </div>
                 </div>
             </section>
 

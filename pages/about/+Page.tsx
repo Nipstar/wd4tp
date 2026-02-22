@@ -1,9 +1,22 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2 } from 'lucide-react'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+
+const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Web Design for Tradespeople",
+    "url": "https://webdesignfortradespeople.co.uk/about"
+}
 
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={aboutSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'About', item: 'https://webdesignfortradespeople.co.uk/about' }
+            ]} />
             <section className="bg-brand-dark pt-32 pb-32 lg:pt-40 lg:pb-40 text-center text-white relative overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center z-0"

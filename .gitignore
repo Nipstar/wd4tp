@@ -1,1 +1,8 @@
 node_modules
+dist/
+.env
+.env.local
+.env.production
+.DS_Store
+public/robots.txt
+public/sitemap.xml

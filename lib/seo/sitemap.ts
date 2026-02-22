@@ -12,7 +12,11 @@ const pages = [
     '/plumbers',
     '/roofers',
     '/builders',
-    '/landscapers'
+    '/landscapers',
+    '/plasterers',
+    '/carpenters',
+    '/privacy',
+    '/terms'
 ]
 
 export const generateSitemap = (baseUrl: string) => {

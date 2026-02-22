@@ -7,11 +7,9 @@ type Page = any
 export type PageContextCustom = {
     Page: (pageProps: PageProps) => React.ReactElement
     pageProps?: PageProps
-    exports: {
-        documentProps?: {
-            title?: string
-            description?: string
-        }
+    config?: {
+        title?: string
+        description?: string
     }
 }
 

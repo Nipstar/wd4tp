@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2, Bot, Phone, MessageSquare } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const FAQS = [
     {
@@ -13,9 +15,43 @@ const FAQS = [
     }
 ]
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Receptionist & Chatbot for Tradespeople",
+    "description": "AI voice receptionist and website chatbot for trades. Answers calls, captures leads, and books jobs 24/7.",
+    "provider": {
+        "@type": "ProfessionalService",
+        "name": BUSINESS_DETAILS.name,
+        "telephone": BUSINESS_DETAILS.phoneLink,
+        "url": "https://webdesignfortradespeople.co.uk"
+    },
+    "areaServed": "United Kingdom",
+    "serviceType": "AI Receptionist for Tradespeople"
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={serviceSchema} />
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'AI Receptionist', item: 'https://webdesignfortradespeople.co.uk/ai-receptionist' }
+            ]} />
             <div className="bg-brand-dark overflow-hidden">
                 <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-40 text-white border-b-8 border-brand-ai overflow-hidden">
                     <div
@@ -165,20 +201,21 @@ export function Page() {
                         <h2 className="text-3xl lg:text-5xl font-display font-bold mb-16">Live Demos</h2>
                         <div className="flex flex-col md:flex-row justify-center gap-8 max-w-3xl mx-auto">
 
-                            <div className="flex-1 bg-white/5 border border-brand-ai/20 p-8 rounded-2xl flex flex-col items-center">
+                            <div className="flex-1 bg-white/10 border border-brand-ai/40 p-8 rounded-2xl flex flex-col items-center">
                                 <MessageSquare className="h-12 w-12 text-brand-ai mb-6" />
-                                <h3 className="text-2xl font-bold font-display mb-4">Chatbot Demo</h3>
-                                <p className="text-brand-cream/80 mb-8">Chat with our demo bot. Ask it anything right here on the site.</p>
-                                <Button className="w-full bg-brand-ai hover:bg-brand-ai-dark text-white font-bold h-12">
+                                <h3 className="text-2xl font-bold font-display mb-4 text-white">Chatbot Demo</h3>
+                                <p className="text-brand-cream/80 mb-8">Chat with our AI bot. Ask it anything right here on the site.</p>
+                                <Button onClick={() => window.dispatchEvent(new Event('open-chat-widget'))} className="w-full bg-brand-ai hover:bg-brand-ai-dark text-white font-bold h-12">
                                     Open Chat Widget
                                 </Button>
                             </div>
 
-                            <div className="flex-1 bg-white/5 border border-brand-amber/20 p-8 rounded-2xl flex flex-col items-center">
+                            <div className="flex-1 bg-white/10 border border-brand-amber/40 p-8 rounded-2xl flex flex-col items-center">
                                 <Phone className="h-12 w-12 text-brand-amber mb-6" />
-                                <h3 className="text-2xl font-bold font-display mb-4">Voice Demo</h3>
-                                <Button asChild className="w-full bg-brand-amber hover:bg-brand-amber-hover text-brand-dark font-bold h-12">
-                                    <a href="tel:443333357920">Call Our AI →</a>
+                                <h3 className="text-2xl font-bold font-display mb-4 text-white">Voice Demo</h3>
+                                <p className="text-brand-cream/80 mb-8">Talk to our AI voice agent. It picks up instantly and sounds human.</p>
+                                <Button onClick={() => window.dispatchEvent(new CustomEvent('open-chat-widget', { detail: { mode: 'voice' } }))} className="w-full bg-brand-amber hover:bg-brand-amber-hover text-brand-dark font-bold h-12">
+                                    Call Our AI &rarr;
                                 </Button>
                             </div>
 

@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2 } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const FAQS = [
     {
@@ -13,13 +15,51 @@ const FAQS = [
     }
 ]
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Roofer Website Design",
+    "description": "Trust-winning websites for professional roofers that turn local searches into booked inspections.",
+    "provider": {
+        "@type": "ProfessionalService",
+        "name": BUSINESS_DETAILS.name,
+        "telephone": BUSINESS_DETAILS.phoneLink,
+        "url": "https://webdesignfortradespeople.co.uk"
+    },
+    "areaServed": "United Kingdom",
+    "serviceType": "Web Design for Roofers"
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={serviceSchema} />
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'Roofers', item: 'https://webdesignfortradespeople.co.uk/roofers' }
+            ]} />
+
             <section className="relative bg-brand-dark pt-32 pb-32 lg:pt-48 lg:pb-48 text-center text-white overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-                </div>
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{ backgroundImage: "url('/images/hero-roofers-bg.webp')" }}
+                />
+                {/* Dark overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6 leading-[1.1]">
                         Roofing Websites That Elevate Your <br className="hidden md:block" />

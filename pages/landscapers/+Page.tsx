@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2 } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const FAQS = [
     {
@@ -25,10 +27,51 @@ const FAQS = [
     }
 ]
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Landscaper Website Design",
+    "description": "Stunning websites for landscapers with before/after galleries and seasonal service highlights.",
+    "provider": {
+        "@type": "ProfessionalService",
+        "name": BUSINESS_DETAILS.name,
+        "telephone": BUSINESS_DETAILS.phoneLink,
+        "url": "https://webdesignfortradespeople.co.uk"
+    },
+    "areaServed": "United Kingdom",
+    "serviceType": "Web Design for Landscapers"
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
-            <section className="bg-brand-dark pt-20 pb-32 text-center text-white relative">
+            <SchemaMarkup schema={serviceSchema} />
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'Landscapers', item: 'https://webdesignfortradespeople.co.uk/landscapers' }
+            ]} />
+
+            <section className="relative bg-brand-dark pt-32 pb-32 lg:pt-48 lg:pb-48 text-center text-white overflow-hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{ backgroundImage: "url('/images/hero-landscapers-bg.webp')" }}
+                />
+                {/* Dark overlay to ensure text readability */}
+                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6 leading-[1.1]">
                         Professional Landscaping Websites for <br className="hidden md:block" />

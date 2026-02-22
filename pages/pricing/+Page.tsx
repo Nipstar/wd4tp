@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle2, MessageSquare, Phone } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 
 const FAQS = [
     {
@@ -37,9 +38,27 @@ const FAQS = [
     }
 ]
 
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'Pricing', item: 'https://webdesignfortradespeople.co.uk/pricing' }
+            ]} />
             <div className="bg-brand-cream border-t border-brand-slate/10 py-20 lg:py-32">
                 <div className="container mx-auto px-4 max-w-6xl">
 
@@ -59,10 +78,8 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-brand-dark mb-2">STARTER</h3>
                                 <p className="text-brand-slate text-sm min-h-[40px]">Best for sole traders starting out</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-brand-dark">£X</span>
-                                    <span className="text-brand-slate/60 mb-1">/mo</span>
+                                    <span className="text-4xl font-display font-bold text-brand-dark">£397.00</span>
                                 </div>
-                                <p className="text-xs text-brand-slate/60 mt-1">or £X one-off</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
                                 <ul className="space-y-4 mb-8 flex-1">
@@ -101,10 +118,8 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-white mb-2">TRADES PRO</h3>
                                 <p className="text-brand-cream/70 text-sm min-h-[40px]">Best for established trades wanting more work</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-white">£X</span>
-                                    <span className="text-brand-cream/50 mb-1">/mo</span>
+                                    <span className="text-4xl font-display font-bold text-white">£797.00</span>
                                 </div>
-                                <p className="text-xs text-brand-cream/50 mt-1">or £X one-off</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col bg-brand-dark">
                                 <ul className="space-y-4 mb-8 flex-1">
@@ -144,10 +159,8 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-brand-dark mb-2">FULL WORKS</h3>
                                 <p className="text-brand-slate text-sm min-h-[40px]">Best for trades wanting website + SEO + the lot</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-brand-dark">£X</span>
-                                    <span className="text-brand-slate/60 mb-1">/mo</span>
+                                    <span className="text-4xl font-display font-bold text-brand-dark">£1097.00</span>
                                 </div>
-                                <p className="text-xs text-brand-slate/60 mt-1">or £X one-off</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
                                 <ul className="space-y-4 mb-8 flex-1">
@@ -157,7 +170,7 @@ export function Page() {
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-brand-slate">
                                         <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
-                                        Ongoing monthly SEO
+                                        Full local SEO + citations
                                     </li>
                                     <li className="flex items-start gap-3 text-sm text-brand-slate">
                                         <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0" />
@@ -220,14 +233,14 @@ export function Page() {
                                 <div className="flex flex-col gap-2 border-t border-white/10 pt-6 mb-6">
                                     <div className="flex justify-between items-end">
                                         <span className="text-sm text-brand-cream/60">Monthly</span>
-                                        <span className="font-bold text-lg">From £X/mo</span>
+                                        <span className="font-bold text-lg">£47/mo</span>
                                     </div>
                                     <div className="flex justify-between items-end">
                                         <span className="text-sm text-brand-cream/60">Setup</span>
-                                        <span className="font-medium text-sm">£X one-off</span>
+                                        <span className="font-medium text-sm">Included</span>
                                     </div>
                                 </div>
-                                <Button className="w-full bg-brand-ai hover:bg-brand-ai-dark text-white font-bold h-12">
+                                <Button onClick={() => window.dispatchEvent(new Event('open-chat-widget'))} className="w-full bg-brand-ai hover:bg-brand-ai-dark text-white font-bold h-12">
                                     Chat with our Demo &rarr;
                                 </Button>
                             </div>
@@ -255,11 +268,11 @@ export function Page() {
                                 <div className="flex flex-col gap-2 border-t border-white/10 pt-6 mb-6">
                                     <div className="flex justify-between items-end">
                                         <span className="text-sm text-brand-cream/60">Monthly</span>
-                                        <span className="font-bold text-lg">From £X/mo</span>
+                                        <span className="font-bold text-lg">£97/mo</span>
                                     </div>
                                     <div className="flex justify-between items-end">
                                         <span className="text-sm text-brand-cream/60">Setup</span>
-                                        <span className="font-medium text-sm">£X one-off</span>
+                                        <span className="font-medium text-sm">No setup fee</span>
                                     </div>
                                 </div>
                                 <Button asChild className="w-full border-2 border-brand-amber text-brand-amber hover:bg-brand-amber/10 font-bold h-12 bg-transparent">

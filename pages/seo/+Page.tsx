@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { TrendingUp, FileText } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
+import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const FAQS = [
     {
@@ -17,9 +19,43 @@ const FAQS = [
     }
 ]
 
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO for Tradespeople",
+    "description": "Local SEO services for trades. Google Business Profile setup, on-page optimisation, and content strategy.",
+    "provider": {
+        "@type": "ProfessionalService",
+        "name": BUSINESS_DETAILS.name,
+        "telephone": BUSINESS_DETAILS.phoneLink,
+        "url": "https://webdesignfortradespeople.co.uk"
+    },
+    "areaServed": "United Kingdom",
+    "serviceType": "SEO for Tradespeople"
+}
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+        }
+    }))
+}
+
 export function Page() {
     return (
         <>
+            <SchemaMarkup schema={serviceSchema} />
+            <SchemaMarkup schema={faqSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'SEO', item: 'https://webdesignfortradespeople.co.uk/seo' }
+            ]} />
             <section className="bg-brand-dark pt-20 pb-32 text-center text-white relative">
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl">
                     <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6">

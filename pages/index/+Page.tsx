@@ -5,7 +5,7 @@ import { AIShowcase } from '@/components/sections/AIShowcase'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { TestimonialCarousel } from '@/components/sections/TestimonialCarousel'
 import { CTASection } from '@/components/sections/CTASection'
-import { SchemaMarkup } from '@/components/seo/SchemaMarkup'
+import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 import { BUSINESS_DETAILS } from '@/lib/constants'
 
 const homepageSchema = {
@@ -34,6 +34,9 @@ export function Page() {
     return (
         <>
             <SchemaMarkup schema={homepageSchema} />
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' }
+            ]} />
             <Hero />
             <ProblemSection />
             <TradeGrid />

@@ -5,7 +5,14 @@ export const BUSINESS_DETAILS = {
     phoneLink: "+443333357920",
     email: "hello@webdesignfortradespeople.co.uk",
     hours: {
-        weekdays: "8 AM – 7 PM",
-        weekends: "Closed"
+        weekdays: "Mon - Fri 8 AM – 7 PM",
+        weekends: "Sat & Sun Closed"
+    },
+    socials: {
+        facebook: "https://www.facebook.com/people/Web-Design-For-Trades-People/61577626973640/",
+        instagram: "https://www.instagram.com/wd4tradesuk/",
+        x: "https://x.com/WD4trades",
+        youtube: "https://www.youtube.com/@WebDesign4TradesPeople",
+        pinterest: "https://www.pinterest.com/WebDesign4TradesPeople/"
     }
 }

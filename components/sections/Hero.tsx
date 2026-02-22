@@ -5,13 +5,12 @@ export function Hero() {
     return (
         <section className="relative bg-brand-dark pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden">
             {/* Background decoration with generated image */}
-            <div className="absolute inset-0 z-0 bg-brand-dark">
+            <div className="absolute inset-0 z-0">
                 <div
-                    className="absolute inset-0 opacity-40 bg-cover bg-center bg-no-repeat Mix-blend-overlay"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: 'url(/images/home-hero-bg.webp)' }}
                 />
-                {/* Gradient overlay to ensure text legibility on the left side */}
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent" />
+                <div className="absolute inset-0 bg-brand-dark/30" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10">

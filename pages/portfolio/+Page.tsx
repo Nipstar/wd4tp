@@ -1,16 +1,21 @@
 import { Button } from '@/components/ui/button'
 import { TrendingUp, ArrowRight } from 'lucide-react'
+import { BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 
 export function Page() {
     return (
         <>
+            <BreadcrumbSchema items={[
+                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
+                { name: 'Portfolio', item: 'https://webdesignfortradespeople.co.uk/portfolio' }
+            ]} />
             <section className="bg-brand-dark pt-32 pb-32 lg:pt-40 lg:pb-40 text-center text-white relative overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center z-0"
                     style={{ backgroundImage: "url('/images/hero-portfolio-bg.webp')" }}
                 />
                 {/* Dark overlay to ensure text readability */}
-                <div className="absolute inset-0 bg-brand-dark/80 z-0" />
+                <div className="absolute inset-0 bg-brand-dark/60 z-0" />
 
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl text-white font-display font-bold mb-6">

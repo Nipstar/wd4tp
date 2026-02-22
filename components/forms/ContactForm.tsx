@@ -22,7 +22,7 @@ export function ContactForm() {
         setErrorMsg('')
 
         try {
-            const webhookUrl = (import.meta as any).env.VITE_CONTACT_WEBHOOK_URL
+            const webhookUrl = import.meta.env.VITE_CONTACT_WEBHOOK_URL
             if (!webhookUrl) throw new Error('Webhook URL not configured.')
 
             const response = await fetch(webhookUrl, {
@@ -40,8 +40,7 @@ export function ContactForm() {
             if (!response.ok) throw new Error('Failed to submit form')
 
             setIsSuccess(true)
-        } catch (error) {
-            console.error('Submission error:', error)
+        } catch {
             setErrorMsg('Something went wrong. Please try calling or emailing us directly instead.')
         } finally {
             setIsSubmitting(false)
@@ -71,7 +70,7 @@ export function ContactForm() {
                         className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
                         {...register('name', { required: 'Name is required' })}
                     />
-                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+                    {errors.name && <p role="alert" className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
                 </div>
 
                 <div>
@@ -81,7 +80,7 @@ export function ContactForm() {
                         className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
                         {...register('phone', { required: 'Phone number is required' })}
                     />
-                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+                    {errors.phone && <p role="alert" className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
                 </div>
 
                 <div>
@@ -100,11 +99,11 @@ export function ContactForm() {
                         className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none resize-none"
                         {...register('message', { required: 'Please leave a brief message' })}
                     />
-                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
+                    {errors.message && <p role="alert" className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
                 </div>
 
                 {errorMsg && (
-                    <div className="bg-red-50 text-red-600 p-4 rounded-lg text-sm border border-red-200">
+                    <div role="alert" className="bg-red-50 text-red-600 p-4 rounded-lg text-sm border border-red-200">
                         {errorMsg}
                     </div>
                 )}

@@ -7,6 +7,8 @@ const FOOTER_LINKS = {
         { label: 'Roofers', href: '/roofers' },
         { label: 'Builders', href: '/builders' },
         { label: 'Landscapers', href: '/landscapers' },
+        { label: 'Plasterers', href: '/plasterers' },
+        { label: 'Carpenters', href: '/carpenters' },
     ],
     Company: [
         { label: 'About', href: '/about' },
@@ -43,8 +45,9 @@ export function Footer() {
                             <a href={`tel:${BUSINESS_DETAILS.phoneLink}`} className="text-xl font-display font-bold text-brand-amber hover:text-brand-amber-hover transition-colors">
                                 {BUSINESS_DETAILS.phone}
                             </a>
-                            <span className="text-sm text-brand-cream/60">
-                                {BUSINESS_DETAILS.hours.weekdays}
+                            <span className="text-sm text-brand-cream/60 flex flex-col gap-1">
+                                <span>{BUSINESS_DETAILS.hours.weekdays}</span>
+                                <span>{BUSINESS_DETAILS.hours.weekends}</span>
                             </span>
                         </div>
                     </div>
@@ -86,6 +89,15 @@ export function Footer() {
                                 {BUSINESS_DETAILS.email}
                             </a>
                         </address>
+
+                        <h4 className="font-display font-semibold text-lg mt-8 mb-4 text-white">Social</h4>
+                        <div className="flex flex-wrap gap-4">
+                            {BUSINESS_DETAILS.socials && Object.entries(BUSINESS_DETAILS.socials).map(([network, url]) => (
+                                <a key={network} href={url} target="_blank" rel="noopener noreferrer" className="text-brand-cream/70 hover:text-brand-amber transition-colors capitalize text-sm">
+                                    {network}
+                                </a>
+                            ))}
+                        </div>
                     </div>
 
                 </div>
