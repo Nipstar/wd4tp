@@ -55,8 +55,8 @@ export function Hero() {
                             <span>50+ trade websites built</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-amber-400 text-lg">★★★★★</span>
-                            <span>4.9 Google Rating</span>
+                            <CheckCircle2 className="h-5 w-5 text-green-500" />
+                            <span>Fast, Reliable Service</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-5 w-5 text-green-500" />

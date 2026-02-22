@@ -22,11 +22,6 @@ const homepageSchema = {
     },
     "areaServed": ["Hampshire", "United Kingdom"],
     "priceRange": "££",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "50"
-    },
     "serviceType": ["Web Design", "SEO", "AI Chatbot", "AI Voice Agent"]
 }
 
