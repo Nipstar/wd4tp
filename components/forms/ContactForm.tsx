@@ -7,8 +7,18 @@ type ContactFormData = {
     name: string;
     phone: string;
     email: string;
+    trade: string;
+    interest: string;
     message: string;
 }
+
+const TRADES = ['Electrician', 'Plumber', 'Roofer', 'Builder', 'Landscaper', 'Carpenter', 'Plasterer', 'Other']
+const INTERESTS = [
+    { value: 'new-site', label: 'A new website (or redesign)' },
+    { value: 'seo', label: 'Better Google rankings (SEO)' },
+    { value: 'ai-receptionist', label: 'AI Receptionist / Chatbot' },
+    { value: 'all', label: 'The Full Works (Site, SEO, AI)' },
+]
 
 export function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -31,7 +41,7 @@ export function ContactForm() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    source: 'General Contact Form',
+                    source: 'Contact Form',
                     ...data,
                     timestamp: new Date().toISOString()
                 })
@@ -59,28 +69,31 @@ export function ContactForm() {
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-brand-slate/10 p-6 md:p-8">
-            <h3 className="text-2xl font-display font-bold text-brand-dark mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-display font-bold text-brand-dark mb-2">Send us a message</h3>
+            <p className="text-brand-slate text-sm mb-6">We'll give you a price range straight away. No sales pitch.</p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
-                <div>
-                    <label className="block text-sm font-bold text-brand-dark mb-1">Name</label>
-                    <input
-                        type="text"
-                        className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
-                        {...register('name', { required: 'Name is required' })}
-                    />
-                    {errors.name && <p role="alert" className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
-                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label className="block text-sm font-bold text-brand-dark mb-1">Name *</label>
+                        <input
+                            type="text"
+                            className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
+                            {...register('name', { required: 'Name is required' })}
+                        />
+                        {errors.name && <p role="alert" className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
+                    </div>
 
-                <div>
-                    <label className="block text-sm font-bold text-brand-dark mb-1">Phone Number</label>
-                    <input
-                        type="tel"
-                        className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
-                        {...register('phone', { required: 'Phone number is required' })}
-                    />
-                    {errors.phone && <p role="alert" className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+                    <div>
+                        <label className="block text-sm font-bold text-brand-dark mb-1">Phone Number *</label>
+                        <input
+                            type="tel"
+                            className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none"
+                            {...register('phone', { required: 'Phone number is required' })}
+                        />
+                        {errors.phone && <p role="alert" className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
+                    </div>
                 </div>
 
                 <div>
@@ -92,14 +105,43 @@ export function ContactForm() {
                     />
                 </div>
 
+                <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label className="block text-sm font-bold text-brand-dark mb-1">Your Trade</label>
+                        <select
+                            className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none bg-white text-brand-slate"
+                            {...register('trade')}
+                            defaultValue=""
+                        >
+                            <option value="" disabled>Select your trade</option>
+                            {TRADES.map(trade => (
+                                <option key={trade} value={trade.toLowerCase()}>{trade}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-bold text-brand-dark mb-1">Interested in</label>
+                        <select
+                            className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none bg-white text-brand-slate"
+                            {...register('interest')}
+                            defaultValue=""
+                        >
+                            <option value="" disabled>Select an option</option>
+                            {INTERESTS.map(({ value, label }) => (
+                                <option key={value} value={value}>{label}</option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
+
                 <div>
-                    <label className="block text-sm font-bold text-brand-dark mb-1">How can we help?</label>
+                    <label className="block text-sm font-bold text-brand-dark mb-1">How can we help? <span className="font-normal text-brand-slate/60">(optional)</span></label>
                     <textarea
-                        rows={4}
+                        rows={3}
                         className="w-full p-3 border-2 border-brand-slate/20 rounded-xl focus:border-brand-amber outline-none resize-none"
-                        {...register('message', { required: 'Please leave a brief message' })}
+                        {...register('message')}
                     />
-                    {errors.message && <p role="alert" className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
                 </div>
 
                 {errorMsg && (
@@ -111,12 +153,12 @@ export function ContactForm() {
                 <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-12 text-lg bg-brand-dark text-white hover:bg-slate-800 font-bold"
+                    className="w-full h-12 text-lg bg-brand-amber hover:bg-brand-amber-hover text-brand-dark font-bold"
                 >
                     {isSubmitting ? (
                         <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...</>
                     ) : (
-                        'Send Message'
+                        'Get In Touch'
                     )}
                 </Button>
             </form>

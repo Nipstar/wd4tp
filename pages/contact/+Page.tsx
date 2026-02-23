@@ -1,6 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { ContactForm } from '@/components/forms/ContactForm'
-import { QuoteForm } from '@/components/forms/QuoteForm'
 import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 import { BUSINESS_DETAILS } from '@/lib/constants'
 
@@ -38,7 +37,6 @@ export function Page() {
                     className="absolute inset-0 bg-cover bg-center z-0"
                     style={{ backgroundImage: "url('/images/hero-contact-bg.webp')" }}
                 />
-                {/* Dark overlay to ensure text readability */}
                 <div className="absolute inset-0 bg-brand-dark/80 z-0" />
 
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl flex flex-col items-center">
@@ -50,9 +48,9 @@ export function Page() {
             </section>
 
             <section className="py-24 bg-brand-cream border-b border-brand-slate/10 -mt-20">
-                <div className="container mx-auto px-4 max-w-6xl">
+                <div className="container mx-auto px-4 max-w-3xl">
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-16 relative z-20 max-w-3xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-6 mb-16 relative z-20">
                         <a href="tel:443333357920" className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-t-brand-amber text-center group hover:-translate-y-2 transition-transform">
                             <div className="h-16 w-16 bg-brand-amber/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <Phone className="h-8 w-8 text-brand-amber" />
@@ -72,23 +70,7 @@ export function Page() {
                         </a>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-12 mt-16 max-w-6xl mx-auto items-start">
-
-                        <div className="order-2 lg:order-1">
-                            <ContactForm />
-                        </div>
-
-                        <div className="order-1 lg:order-2">
-                            <div className="bg-brand-dark rounded-2xl p-6 md:p-8 shadow-xl border-t-[6px] border-t-brand-amber text-white">
-                                <h2 className="text-3xl font-display font-bold mb-4">Get a Quote Online</h2>
-                                <p className="text-brand-cream/80 mb-8">
-                                    We'll give you a price range straight away based on your needs. No sales pitch.
-                                </p>
-                                <QuoteForm />
-                            </div>
-                        </div>
-
-                    </div>
+                    <ContactForm />
 
                     <div className="mt-16 text-center">
                         <div className="inline-flex items-center gap-2 text-brand-slate/80 text-sm bg-brand-cream py-3 px-6 rounded-lg border border-brand-slate/10 shadow-sm">
