@@ -3,7 +3,7 @@ import { escapeInject, dangerouslySkipEscape } from 'vike/server'
 import { PageShell } from './PageShell'
 import type { PageContextServer } from './types'
 
-const BASE_URL = 'https://webdesignfortradespeople.co.uk'
+const BASE_URL = 'https://www.webdesignfortradespeople.co.uk'
 
 export async function onRenderHtml(pageContext: PageContextServer) {
     const { Page, pageProps } = pageContext

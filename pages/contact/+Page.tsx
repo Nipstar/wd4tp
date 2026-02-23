@@ -7,7 +7,7 @@ const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Web Design for Tradespeople",
-    "url": "https://webdesignfortradespeople.co.uk/contact",
+    "url": "https://www.webdesignfortradespeople.co.uk/contact",
     "mainEntity": {
         "@type": "ProfessionalService",
         "name": BUSINESS_DETAILS.name,
@@ -29,8 +29,8 @@ export function Page() {
         <>
             <SchemaMarkup schema={contactSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'Contact', item: 'https://webdesignfortradespeople.co.uk/contact' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'Contact', item: 'https://www.webdesignfortradespeople.co.uk/contact' }
             ]} />
             <section className="bg-brand-dark pt-32 pb-32 lg:pt-48 lg:pb-48 text-center text-white relative overflow-hidden">
                 <div

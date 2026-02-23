@@ -3,7 +3,7 @@ import path from 'path'
 import { generateRobotsTxt } from '../lib/seo/robots'
 import { generateSitemap } from '../lib/seo/sitemap'
 
-const BASE_URL = 'https://webdesignfortradespeople.co.uk'
+const BASE_URL = 'https://www.webdesignfortradespeople.co.uk'
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public')
 
 async function generate() {

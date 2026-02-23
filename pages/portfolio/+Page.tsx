@@ -6,8 +6,8 @@ export function Page() {
     return (
         <>
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'Portfolio', item: 'https://webdesignfortradespeople.co.uk/portfolio' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'Portfolio', item: 'https://www.webdesignfortradespeople.co.uk/portfolio' }
             ]} />
             <section className="bg-brand-dark pt-32 pb-32 lg:pt-40 lg:pb-40 text-center text-white relative overflow-hidden">
                 <div

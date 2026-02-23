@@ -6,7 +6,7 @@ const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Web Design for Tradespeople",
-    "url": "https://webdesignfortradespeople.co.uk/about"
+    "url": "https://www.webdesignfortradespeople.co.uk/about"
 }
 
 export function Page() {
@@ -14,8 +14,8 @@ export function Page() {
         <>
             <SchemaMarkup schema={aboutSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'About', item: 'https://webdesignfortradespeople.co.uk/about' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'About', item: 'https://www.webdesignfortradespeople.co.uk/about' }
             ]} />
             <section className="bg-brand-dark pt-32 pb-32 lg:pt-40 lg:pb-40 text-center text-white relative overflow-hidden">
                 <div

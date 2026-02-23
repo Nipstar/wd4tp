@@ -5,8 +5,8 @@ export function Page() {
     return (
         <>
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'Terms of Service', item: 'https://webdesignfortradespeople.co.uk/terms' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'Terms of Service', item: 'https://www.webdesignfortradespeople.co.uk/terms' }
             ]} />
 
             <section className="bg-brand-dark pt-32 pb-16 text-white">

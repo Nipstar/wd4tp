@@ -56,8 +56,8 @@ export function Page() {
         <>
             <SchemaMarkup schema={faqSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'Pricing', item: 'https://webdesignfortradespeople.co.uk/pricing' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'Pricing', item: 'https://www.webdesignfortradespeople.co.uk/pricing' }
             ]} />
             <div className="bg-brand-cream border-t border-brand-slate/10 py-20 lg:py-32">
                 <div className="container mx-auto px-4 max-w-6xl">

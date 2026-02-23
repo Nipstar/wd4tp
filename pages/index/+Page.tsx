@@ -12,7 +12,7 @@ const homepageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": BUSINESS_DETAILS.name,
-    "url": "https://webdesignfortradespeople.co.uk",
+    "url": "https://www.webdesignfortradespeople.co.uk",
     "telephone": BUSINESS_DETAILS.phoneLink,
     "address": {
         "@type": "PostalAddress",
@@ -30,7 +30,7 @@ export function Page() {
         <>
             <SchemaMarkup schema={homepageSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' }
             ]} />
             <Hero />
             <ProblemSection />

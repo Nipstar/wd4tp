@@ -28,7 +28,7 @@ const serviceSchema = {
         "@type": "ProfessionalService",
         "name": BUSINESS_DETAILS.name,
         "telephone": BUSINESS_DETAILS.phoneLink,
-        "url": "https://webdesignfortradespeople.co.uk"
+        "url": "https://www.webdesignfortradespeople.co.uk"
     },
     "areaServed": "United Kingdom",
     "serviceType": "SEO for Tradespeople"
@@ -53,8 +53,8 @@ export function Page() {
             <SchemaMarkup schema={serviceSchema} />
             <SchemaMarkup schema={faqSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'SEO', item: 'https://webdesignfortradespeople.co.uk/seo' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'SEO', item: 'https://www.webdesignfortradespeople.co.uk/seo' }
             ]} />
             <section className="bg-brand-dark pt-20 pb-32 text-center text-white relative">
                 <div className="container mx-auto px-4 relative z-10 max-w-4xl">

@@ -24,7 +24,7 @@ const serviceSchema = {
         "@type": "ProfessionalService",
         "name": BUSINESS_DETAILS.name,
         "telephone": BUSINESS_DETAILS.phoneLink,
-        "url": "https://webdesignfortradespeople.co.uk"
+        "url": "https://www.webdesignfortradespeople.co.uk"
     },
     "areaServed": "United Kingdom",
     "serviceType": "AI Receptionist for Tradespeople"
@@ -49,8 +49,8 @@ export function Page() {
             <SchemaMarkup schema={serviceSchema} />
             <SchemaMarkup schema={faqSchema} />
             <BreadcrumbSchema items={[
-                { name: 'Home', item: 'https://webdesignfortradespeople.co.uk' },
-                { name: 'AI Receptionist', item: 'https://webdesignfortradespeople.co.uk/ai-receptionist' }
+                { name: 'Home', item: 'https://www.webdesignfortradespeople.co.uk' },
+                { name: 'AI Receptionist', item: 'https://www.webdesignfortradespeople.co.uk/ai-receptionist' }
             ]} />
             <div className="bg-brand-dark overflow-hidden">
                 <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-40 text-white border-b-8 border-brand-ai overflow-hidden">
