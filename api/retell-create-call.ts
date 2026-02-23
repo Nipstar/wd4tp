@@ -1,15 +1,15 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
+export const config = { runtime: 'edge' }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: Request) {
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' })
+        return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405 })
     }
 
     const apiKey = process.env.RETELL_API_KEY
     const agentId = process.env.RETELL_AGENT_ID
 
     if (!apiKey || !agentId) {
-        return res.status(500).json({ error: 'Voice service not configured' })
+        return new Response(JSON.stringify({ error: 'Voice service not configured' }), { status: 500 })
     }
 
     try {
@@ -23,12 +23,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         })
 
         if (!response.ok) {
-            return res.status(500).json({ error: 'Unable to start voice call. Please try again.' })
+            return new Response(JSON.stringify({ error: 'Unable to start voice call. Please try again.' }), { status: 500 })
         }
 
         const data = await response.json()
-        res.json({ access_token: data.access_token })
+        return new Response(JSON.stringify({ access_token: data.access_token }), {
+            headers: { 'Content-Type': 'application/json' },
+        })
     } catch {
-        res.status(500).json({ error: 'Service temporarily unavailable' })
+        return new Response(JSON.stringify({ error: 'Service temporarily unavailable' }), { status: 500 })
     }
 }
