@@ -2,9 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
   "cleanUrls": true,
-  "functions": {
-    "api/*.ts": {
-      "runtime": "@vercel/node@3"
-    }
-  }
+  "rewrites": [
+    { "source": "/api/retell-create-call", "destination": "/api/retell-create-call" },
+    { "source": "/api/retell-text-chat", "destination": "/api/retell-text-chat" }
+  ]
 }
