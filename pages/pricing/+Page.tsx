@@ -6,23 +6,23 @@ import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 const FAQS = [
     {
         q: "How much does a trade website actually cost?",
-        a: "Starter is from £X/month. 5-page website, works on phones, shows up on Google. No big upfront cost."
+        a: "Starter is £397 one-off for a 5-page website that works on phones and shows up on Google. Then just £15/mo for hosting, SSL and support. No big monthly commitment."
     },
     {
-        q: "What's in the monthly fee?",
-        a: "Hosting, SSL, security updates, basic content changes, email support. We keep it running so you don't have to think about it."
+        q: "What's included in the £15/mo?",
+        a: "Hosting, SSL certificate, security updates, basic content changes and email support. We keep it running so you don't have to think about it."
     },
     {
         q: "Can I cancel anytime?",
         a: "Yes. No long contracts. We're confident you'll stay because it works, not because you're locked in."
     },
     {
-        q: "Do I need the AI add-ons?",
-        a: "Need? No. But if you're missing calls on jobs — and most trades are — the AI receptionist pays for itself with one captured job. Try the 14-day trial."
+        q: "How much are the AI add-ons?",
+        a: "AI Chatbot is £47/mo and the AI Receptionist is £97/mo. Both come with a free trial — 14 days for the chatbot. If you're missing calls on jobs, the receptionist pays for itself with one captured lead."
     },
     {
         q: "What if I already have a website?",
-        a: "We redesign it. Trades Pro and Full Works include migrating your content and setting up redirects so you don't lose Google rankings."
+        a: "We redesign it. Trades Pro (£797) and Full Works (£1,097) include migrating your content and setting up redirects so you don't lose Google rankings."
     },
     {
         q: "How long does it take?",
@@ -80,6 +80,7 @@ export function Page() {
                                 <div className="mt-6 flex items-end gap-1">
                                     <span className="text-4xl font-display font-bold text-brand-dark">£397.00</span>
                                 </div>
+                                <p className="text-xs text-brand-slate/60 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
                                 <ul className="space-y-4 mb-8 flex-1">
@@ -120,6 +121,7 @@ export function Page() {
                                 <div className="mt-6 flex items-end gap-1">
                                     <span className="text-4xl font-display font-bold text-white">£797.00</span>
                                 </div>
+                                <p className="text-xs text-brand-cream/50 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col bg-brand-dark">
                                 <ul className="space-y-4 mb-8 flex-1">
@@ -161,6 +163,7 @@ export function Page() {
                                 <div className="mt-6 flex items-end gap-1">
                                     <span className="text-4xl font-display font-bold text-brand-dark">£1097.00</span>
                                 </div>
+                                <p className="text-xs text-brand-slate/60 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
                                 <ul className="space-y-4 mb-8 flex-1">
