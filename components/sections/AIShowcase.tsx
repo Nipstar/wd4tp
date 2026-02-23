@@ -19,7 +19,7 @@ export function AIShowcase() {
 
                     {/* Content */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-ai/20 text-brand-ai font-medium text-sm mb-6 border border-brand-ai/30">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-ai/20 text-brand-ai-light font-medium text-sm mb-6 border border-brand-ai/30">
                             <Bot className="h-4 w-4" />
                             Certified Retell AI Partner
                         </div>
@@ -54,14 +54,14 @@ export function AIShowcase() {
                                 <div className="bg-brand-ai/20 h-10 w-10 rounded flex items-center justify-center mb-4">
                                     <PhoneIncoming className="h-5 w-5 text-brand-ai" />
                                 </div>
-                                <h4 className="font-display font-bold mb-2">AI Voice Agent</h4>
+                                <h3 className="font-display font-bold mb-2 text-lg">AI Voice Agent</h3>
                                 <p className="text-sm text-brand-cream/70 leading-relaxed">Handles missed calls 24/7. Sounds natural, books jobs.</p>
                             </div>
                             <div className="bg-white/5 border border-brand-ai/20 p-5 rounded-xl">
                                 <div className="bg-brand-ai/20 h-10 w-10 rounded flex items-center justify-center mb-4">
                                     <MessageSquare className="h-5 w-5 text-brand-ai" />
                                 </div>
-                                <h4 className="font-display font-bold mb-2">Website Chatbot</h4>
+                                <h3 className="font-display font-bold mb-2 text-lg">Website Chatbot</h3>
                                 <p className="text-sm text-brand-cream/70 leading-relaxed">Engages visitors instantly. Qualifies leads while you sleep.</p>
                             </div>
                         </div>

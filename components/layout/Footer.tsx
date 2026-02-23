@@ -37,6 +37,8 @@ export function Footer() {
                             src="/logo.svg"
                             alt="Web Design for Tradespeople Logo"
                             className="h-10 w-auto object-contain self-start"
+                            width={200}
+                            height={40}
                         />
                         <p className="text-brand-cream/70 text-sm max-w-sm">
                             We build websites specifically for tradespeople. No waffle, no jargon, just sites that rank on Google and answer your phone when you can't.
@@ -54,7 +56,7 @@ export function Footer() {
 
                     {/* Trades Nav */}
                     <div>
-                        <h4 className="font-display font-semibold text-lg mb-6 text-white">Trades</h4>
+                        <h3 className="font-display font-semibold text-lg mb-6 text-white">Trades</h3>
                         <ul className="flex flex-col gap-4">
                             {FOOTER_LINKS.Trades.map((link) => (
                                 <li key={link.href}>
@@ -68,7 +70,7 @@ export function Footer() {
 
                     {/* Company Nav */}
                     <div>
-                        <h4 className="font-display font-semibold text-lg mb-6 text-white">Company</h4>
+                        <h3 className="font-display font-semibold text-lg mb-6 text-white">Company</h3>
                         <ul className="flex flex-col gap-4">
                             {FOOTER_LINKS.Company.map((link) => (
                                 <li key={link.href}>
@@ -82,7 +84,7 @@ export function Footer() {
 
                     {/* Contact Details */}
                     <div>
-                        <h4 className="font-display font-semibold text-lg mb-6 text-white">Contact</h4>
+                        <h3 className="font-display font-semibold text-lg mb-6 text-white">Contact</h3>
                         <address className="not-italic text-sm text-brand-cream/70 flex flex-col gap-4">
                             <p>{BUSINESS_DETAILS.address}</p>
                             <a href={`mailto:${BUSINESS_DETAILS.email}`} className="hover:text-brand-amber transition-colors">
@@ -90,7 +92,7 @@ export function Footer() {
                             </a>
                         </address>
 
-                        <h4 className="font-display font-semibold text-lg mt-8 mb-4 text-white">Social</h4>
+                        <h3 className="font-display font-semibold text-lg mt-8 mb-4 text-white">Social</h3>
                         <div className="flex flex-wrap gap-4">
                             {BUSINESS_DETAILS.socials && Object.entries(BUSINESS_DETAILS.socials).map(([network, url]) => (
                                 <a key={network} href={url} target="_blank" rel="noopener noreferrer" className="text-brand-cream/70 hover:text-brand-amber transition-colors capitalize text-sm">

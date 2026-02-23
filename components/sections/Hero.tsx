@@ -6,9 +6,15 @@ export function Hero() {
         <section className="relative bg-brand-dark pt-20 pb-32 lg:pt-32 lg:pb-48 overflow-hidden">
             {/* Background decoration with generated image */}
             <div className="absolute inset-0 z-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: 'url(/images/home-hero-bg.webp)' }}
+                <img
+                    src="/images/home-hero-bg.webp"
+                    alt=""
+                    role="presentation"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    width={1920}
+                    height={1080}
                 />
                 <div className="absolute inset-0 bg-brand-dark/30" />
             </div>
