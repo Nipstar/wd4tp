@@ -6,7 +6,7 @@ import { SchemaMarkup, BreadcrumbSchema } from '@/components/seo/SchemaMarkup'
 const FAQS = [
     {
         q: "How much does a trade website actually cost?",
-        a: "Starter is £397 one-off for a 5-page website that works on phones and shows up on Google. Then just £15/mo for hosting, SSL and support. No big monthly commitment."
+        a: "Starter is £597 one-off for a 5-page website that works on phones and shows up on Google. Then just £15/mo for hosting, SSL and support. No big monthly commitment."
     },
     {
         q: "What's included in the £15/mo?",
@@ -22,7 +22,7 @@ const FAQS = [
     },
     {
         q: "What if I already have a website?",
-        a: "We redesign it. Trades Pro (£797) and Full Works (£1,097) include migrating your content and setting up redirects so you don't lose Google rankings."
+        a: "We redesign it. Trades Pro (£997) and Full Works (£1,297) include migrating your content and setting up redirects so you don't lose Google rankings."
     },
     {
         q: "How long does it take?",
@@ -78,7 +78,7 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-brand-dark mb-2">STARTER</h3>
                                 <p className="text-brand-slate text-sm min-h-[40px]">Best for sole traders starting out</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-brand-dark">£397.00</span>
+                                    <span className="text-4xl font-display font-bold text-brand-dark">£597.00</span>
                                 </div>
                                 <p className="text-xs text-brand-slate/60 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
@@ -119,7 +119,7 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-white mb-2">TRADES PRO</h3>
                                 <p className="text-brand-cream/70 text-sm min-h-[40px]">Best for established trades wanting more work</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-white">£797.00</span>
+                                    <span className="text-4xl font-display font-bold text-white">£997.00</span>
                                 </div>
                                 <p className="text-xs text-brand-cream/50 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
@@ -161,7 +161,7 @@ export function Page() {
                                 <h3 className="text-2xl font-display font-bold text-brand-dark mb-2">FULL WORKS</h3>
                                 <p className="text-brand-slate text-sm min-h-[40px]">Best for trades wanting website + SEO + the lot</p>
                                 <div className="mt-6 flex items-end gap-1">
-                                    <span className="text-4xl font-display font-bold text-brand-dark">£1097.00</span>
+                                    <span className="text-4xl font-display font-bold text-brand-dark">£1297.00</span>
                                 </div>
                                 <p className="text-xs text-brand-slate/60 mt-2">+ £15/mo hosting, SSL & support</p>
                             </div>
@@ -279,7 +279,7 @@ export function Page() {
                                     </div>
                                 </div>
                                 <Button asChild className="w-full border-2 border-brand-amber text-brand-amber hover:bg-brand-amber/10 font-bold h-12 bg-transparent">
-                                    <a href="tel:443333357920">
+                                    <a href="tel:443330389960">
                                         Call our AI &rarr;
                                     </a>
                                 </Button>
