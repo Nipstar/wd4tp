@@ -8,7 +8,7 @@ Web Design for Tradespeople (WDFT) builds websites exclusively for trades — pl
 
 ## Contact
 
-- Phone: 0333 335 7920
+- Phone: 0333 038 9960
 - Email: hello@webdesignfortradespeople.co.uk
 - Address: 4 Highlands Road, Andover, Hampshire, SP10 2PX
 - Hours: Mon–Fri 8 AM – 7 PM, Sat & Sun Closed
@@ -18,13 +18,13 @@ Web Design for Tradespeople (WDFT) builds websites exclusively for trades — pl
 
 ### Website Packages (One-Off Cost + £15/mo Hosting)
 
-**Starter — £397**
+**Starter — £597**
 Best for sole traders starting out. 5 pages, mobile-ready, basic on-page SEO, standard contact form, email support.
 
-**Trades Pro — £797**
+**Trades Pro — £997**
 Best for established trades wanting more work. 8–10 pages, full local SEO setup, Google Business Profile setup, before/after gallery, quote request form. Includes 14-day free AI Chatbot trial.
 
-**Full Works — £1,097**
+**Full Works — £1,297**
 Best for trades wanting website + SEO + the lot. Unlimited pages, full local SEO + citations, GBP setup + optimisation, video + before/after gallery, multi-step form + WhatsApp. Includes 3-month free AI Chatbot trial.
 
 All packages include £15/month for hosting, SSL certificate, security updates, basic content changes, and email support.
@@ -60,7 +60,7 @@ AI answers your actual phone. Takes messages, books jobs, handles enquiries. Sou
 ## Pricing FAQ
 
 **How much does a trade website cost?**
-Starter is £397 one-off for a 5-page website. Then £15/mo for hosting, SSL and support.
+Starter is £597 one-off for a 5-page website. Then £15/mo for hosting, SSL and support.
 
 **What's included in the £15/mo?**
 Hosting, SSL certificate, security updates, basic content changes and email support.

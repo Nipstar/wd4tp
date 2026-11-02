@@ -51,12 +51,12 @@ export function Page() {
                 <div className="container mx-auto px-4 max-w-3xl">
 
                     <div className="grid md:grid-cols-2 gap-6 mb-16 relative z-20">
-                        <a href="tel:443333357920" className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-t-brand-amber text-center group hover:-translate-y-2 transition-transform">
+                        <a href="tel:443330389960" className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-t-brand-amber text-center group hover:-translate-y-2 transition-transform">
                             <div className="h-16 w-16 bg-brand-amber/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <Phone className="h-8 w-8 text-brand-amber" />
                             </div>
                             <h3 className="font-display font-bold text-2xl text-brand-dark mb-2">Call us</h3>
-                            <p className="text-xl font-bold text-brand-amber mb-4">0333 335 7920</p>
+                            <p className="text-xl font-bold text-brand-amber mb-4">0333 038 9960</p>
                             <p className="text-sm text-brand-slate/80">Best for: a quick chat to see if we're a good fit.</p>
                         </a>
 
