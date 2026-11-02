@@ -13,7 +13,7 @@ export default async function handler(req: Request) {
     }
 
     try {
-        const response = await fetch('https://api.retellai.com/v2/create-web-call', {
+        const response = await fetch('https://api.retellai.com/v3/create-web-call', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
@@ -26,8 +26,15 @@ export default async function handler(req: Request) {
             return new Response(JSON.stringify({ error: 'Unable to start voice call. Please try again.' }), { status: 500 })
         }
 
+        // v3 returns the full browser connection details; pass them all to startCall()
         const data = await response.json()
-        return new Response(JSON.stringify({ access_token: data.access_token }), {
+        return new Response(JSON.stringify({
+            call_id: data.call_id,
+            access_token: data.access_token,
+            transport: data.transport,
+            ice_servers: data.ice_servers,
+            expires_at: data.expires_at,
+        }), {
             headers: { 'Content-Type': 'application/json' },
         })
     } catch {
