@@ -18,7 +18,7 @@ app.post('/api/retell-create-call', express.json(), async (_req, res) => {
     }
 
     try {
-        const response = await fetch('https://api.retellai.com/v2/create-web-call', {
+        const response = await fetch('https://api.retellai.com/v3/create-web-call', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
@@ -32,7 +32,13 @@ app.post('/api/retell-create-call', express.json(), async (_req, res) => {
         }
 
         const data = await response.json()
-        res.json({ access_token: data.access_token })
+        res.json({
+            call_id: data.call_id,
+            access_token: data.access_token,
+            transport: data.transport,
+            ice_servers: data.ice_servers,
+            expires_at: data.expires_at,
+        })
     } catch {
         res.status(500).json({ error: 'Service temporarily unavailable' })
     }
